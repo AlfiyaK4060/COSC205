@@ -1,33 +1,35 @@
-/* HTML File (index.html) */
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Portal</title>
-    <link rel="stylesheet" href="raj.css">
+    <title>Job Portal - Home</title>
+    <link rel="stylesheet" href="pathfinder.css">
 </head>
 <body>
-    <header>
-        <h1>Find Your Dream Job</h1>
-        <p>Upload your resume and explore opportunities tailored for you.</p>
-    </header>
-    <section class="container">
-        <div class="upload-section">
-            <h2>Upload Your Resume </h2>
-            <input type="file" id="resumeUpload">
-            <button onclick="uploadResume()">Upload Resume</button>
-        </div>
-        <div class="search-section">
-            <h2>Find Jobs</h2>
-            <input type="text" id="jobSearch" placeholder="Enter job title or keyword">
-            <button onclick="searchJobs()">Search Jobs</button>
-        </div>
+    <section id="mainSection">
+        <header>
+            <h1>Welcome to Your Job Portal</h1>
+            <p>Upload your resume and explore opportunities tailored for you.</p>
+        </header>
+        <section class="container">
+            <div class="upload-section">
+                <h2>Upload Your Resume </h2>
+                <input type="file" id="resumeUpload">
+                <button onclick="uploadResume()">Upload Resume</button>
+            </div>
+            <div class="search-section">
+                <h2>Find Jobs</h2>
+                <input type="text" id="jobSearch" placeholder="Enter job title or keyword">
+                <button onclick="searchJobs()">Search Jobs</button>
+            </div>
+        </section>
+        <section class="jobs">
+            <h2>Featured Jobs</h2>
+            <div id="jobList" class="job-list"></div>
+        </section>
     </section>
-    <section class="jobs">
-        <h2>Featured Jobs</h2>
-        <div id="jobList" class="job-list"></div>
-    </section>
-    <script src="script.js"></script>
+
+    <script src="pathfinder.js"></script>
 </body>
 </html>

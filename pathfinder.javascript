@@ -1,7 +1,9 @@
-/* JavaScript File (script.js) */
+// Handle resume upload
 function uploadResume() {
     alert("Resume uploaded successfully!");
 }
+
+// Handle job search and display featured jobs
 function searchJobs() {
     const jobList = document.getElementById("jobList");
     jobList.innerHTML = "";

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Job Portal</title>
+    <link rel="stylesheet" href="pathfinder.css">
+</head>
+<body>
+    <section id="signUpSection">
+        <header>
+            <h1>Create Your Account</h1>
+        </header>
+        <div class="signup-section">
+            <form id="signupForm">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <label for="userType">I am a:</label>
+                <select id="userType" required>
+                    <option value="student">Student</option>
+                    <option value="recruiter">Recruiter</option>
+                </select>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </section>
+
+    <script src="signup.js"></script>
+</body>
+</html>
