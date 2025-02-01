@@ -1,47 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0;
     padding: 20px;
     background: url('background.jpg') no-repeat center center/cover;
-    color: white;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.6);
+    background: #ff9800;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    color: white;
 }
 
-section {
-    margin-top: 20px;
-}
-
-.container, .login-section, .signup-section {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    color: black;
-    margin-top: 20px;
-}
-
-input[type="email"], input[type="password"], input[type="text"], input[type="file"], select {
-    padding: 10px;
-    margin: 10px;
-    width: 100%;
+input[type="email"], input[type="password"], input[type="text"], input[type="file"], select, label {
+    padding: 12px;
+    margin: 10px 0;
+    width: calc(100% - 24px);
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    display: block;
+}
+
+label {
+    border: none; /* Ensure label doesn't have a border */
+    padding: 0; /* Remove padding from label */
+    color: #333; /* Adjust text color for label */
+}
+
+select {
+    width: 100%; /* Ensure select takes up full width */
 }
 
 button {
     background: #ff9800;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
 button:hover {
@@ -50,17 +69,9 @@ button:hover {
 
 a {
     color: #ff9800;
+    text-decoration: none;
 }
 
-.job-list {
-    margin-top: 20px;
-}
-
-.job-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
+a:hover {
+    text-decoration: underline;
 }
