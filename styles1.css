@@ -15,9 +15,8 @@ body, html {
 nav {
   position: fixed;
   top: 0;
-  right: 0;
-  width: auto;
- 
+  width: 100%;
+  background-color: #333;
   padding: 1rem 2rem;
   z-index: 10;
   transition: background-color 0.3s ease;
@@ -41,7 +40,7 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -54,9 +53,7 @@ nav ul li a:hover {
 /* Main Content Section with Background Image */
 .main-content {
   height: 100vh;
-  background-color: white;
-  
- background-image: url('https://www.employmenthelp.org/wp-content/uploads/Job-Board-Header-Background.png');
+  background-image: url('https://www.employmenthelp.org/wp-content/uploads/Job-Board-Header-Background.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -70,8 +67,8 @@ nav ul li a:hover {
 
 /* Heading Box */
 .heading-box {
-  background-color: white;
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   max-width: 80%;
@@ -85,20 +82,17 @@ nav ul li a:hover {
 
 /* Heading */
 .main-content .heading h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 600;
-  color: black;
-  text-shadow: none;
+  color: #333;
   margin-bottom: 1rem;
   animation: fadeIn 2s ease-in;
 }
 
-
-/* Main Content Section with Background Image */
 .main-content .heading h2 {
   font-size: 1.5rem;
-  color: black;
+  color: #666;
   font-weight: 400;
   animation: fadeIn 2s ease-in;
 }
@@ -115,15 +109,181 @@ nav ul li a:hover {
 
 /* Navbar Hover Effects */
 nav:hover {
-  background-color: #333;
+  background-color: #444;
 }
 
 /* Add subtle transition to navbar links */
-nav ul li a {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
 nav ul li a:hover {
   color: #e74c3c;
   transform: translateY(-3px);
+}
+
+/* Container for Portfolio */
+.portfolio-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+/* Inner container to hold images */
+.portfolio-images {
+  display: flex;
+  animation: slideImages 30s linear infinite;
+}
+
+/* Portfolio group styling */
+.portfolio-group {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Portfolio item styling */
+.portfolio-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+/* Ensure full visibility and maintain aspect ratio */
+.portfolio-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Ensure the entire image is visible */
+}
+
+/* Keyframes for the sliding effect */
+@keyframes slideImages {
+  0%, 20% { 
+    transform: translateX(0);
+  }
+  25%, 45% { 
+    transform: translateX(-100%);
+  }
+  50%, 70% { 
+    transform: translateX(-200%);
+  }
+  75%, 95% { 
+    transform: translateX(-300%);
+  }
+  100% { 
+    transform: translateX(0);
+  }
+}
+
+/* Reviews Section */
+.section.reviews {
+  background-color: #333; /* Black background */
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.section.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff; /* White text */
+}
+
+.review {
+  margin-bottom: 2rem;
+  color: #fff; /* White text */
+}
+
+.review .stars {
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-style: italic;
+  color: #ccc; /* Light grey text for review */
+}
+
+.review-author {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #fff; /* White text */
+}
+
+/* Contact Section */
+.section.contact {
+  background-color: #f2f2f2;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.section.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center; /* Center the headings */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e74c3c;
+  text-transform: uppercase;
+}
+
+.contact-detail {
+  font-size: 1rem;
+  color: black;
+}
+
+.contact-detail a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.contact-detail a:hover {
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+  margin-bottom: 0.5rem;
 }
