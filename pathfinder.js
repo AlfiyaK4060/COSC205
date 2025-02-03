@@ -1,7 +1,28 @@
 // Handle resume upload
-function uploadResume() {
+/*function uploadResume() {
     alert("Resume uploaded successfully!");
+*/
+
+// Handle resume upload
+function uploadResume() {
+    const fileInput = document.getElementById("resumeUpload");
+    const file = fileInput.files[0]; // Get the selected file
+
+    if (file) {
+        // Allowed file types
+        const allowedTypes = ['image/png', 'image/jpeg', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf'];
+        
+        // Check if the file type is valid
+        if (allowedTypes.includes(file.type)) {
+            alert("Resume uploaded successfully!");
+        } else {
+            alert("Invalid file type! Please upload a PNG, JPG, DOCX, or PDF file.");
+        }
+    } else {
+        alert("Please select a file to upload.");
+    }
 }
+
 
 /*//Handle job search and display featured jobs
 function searchJobs() {
