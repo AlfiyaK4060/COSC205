@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="path.css"> <!-- Link to your CSS file -->
+    <script src="pathfinder.js" defer></script> <!-- Link to your JS file -->
+</head>
+<body>
+    <header>
+        <h1>Job Board</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="searchJobs()">Browse Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="browseJobs">
+        <h2>Search for Jobs</h2>
+        <div id="searchBar">
+            <input type="text" id="jobSearch" placeholder="Enter job title or company name...">
+            <button onclick="searchJobs()">Search</button>
+        </div>
+
+        <h3>Featured Jobs</h3>
+        <div id="jobList"></div> <!-- This is where job listings will be displayed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Job Board. All rights reserved.</p>
+    </footer>
+</body>
+</html>
