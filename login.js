@@ -20,5 +20,5 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     }
 
     // If both email and password are valid, proceed with the login
-    window.location.href = "path.html"; // Redirect to the homepage (or your desired page)
+    window.location.href = "pathfinder.html"; // Redirect to the homepage (or your desired page)
 });
