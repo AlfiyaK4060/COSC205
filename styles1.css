@@ -65,7 +65,7 @@ nav ul li a:hover {
   transition: background-color 0.5s ease;
 }
 
-/* Heading Box */
+/* Heading Box 
 .heading-box {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3rem;
@@ -78,7 +78,24 @@ nav ul li a:hover {
 .heading-box:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}*/
+
+/* Refactored Code */
+/* Heading Box */
+.heading-box {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 80%;
+  transition: transform 0.5s, opacity 0.5s;
 }
+
+.heading-box:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 
 /* Heading */
 .main-content .heading h1 {
