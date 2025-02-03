@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="script.js" defer></script> <!-- Link to your JS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Job Board</h1>
+        <nav>
+            <ul>
+                <li><a href="#browseJobs" onclick="searchJobs()">Browse Jobs</a></li>
+                <li><a href="#uploadResume" onclick="uploadResume()">Upload Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="browseJobs">
+        <h2>Featured Jobs</h2>
+        <div id="jobList"></div> <!-- This is where job listings will be displayed -->
+    </section>
+
+    <section id="uploadResume">
+        <h2>Upload Your Resume</h2>
+        <input type="file" id="resumeInput" accept=".pdf,.doc,.docx,.txt">
+        <button onclick="uploadResume()">Upload</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Job Board. All rights reserved.</p>
+    </footer>
+</body>
+</html>
